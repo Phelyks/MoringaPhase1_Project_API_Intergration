@@ -10,6 +10,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-image: url(https://wallpapercave.com/wp/wp6598275.jpg); */
+    background-image: url("./../Images/smokewhiteimage.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    
 }
 
 label, textarea {
@@ -20,7 +26,8 @@ label, textarea {
     margin-top: 5%;
     padding: 10px;
     width: 45%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.747);
+    background-color: rgba(0, 0, 0, 0.342);
 }
 
 .main-header {
