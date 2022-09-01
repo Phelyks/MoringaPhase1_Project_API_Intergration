@@ -7,23 +7,44 @@
     <!-- Title will be changed later -->
     <title>API Testing</title>
     <link rel="stylesheet" href="./assets/CSS/main.css">
+
+            <!-- JS-SCRIPTS -->
+     <!-- Import axios library -->
+     <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+     <!-- Querystring library -->
+     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.7.0/qs.min.js"></script>
+ 
+     <!-- Connect to local JS -->
+     <script defer src="./assets/JavaScript/index.js"></script>
     
     
 
 </head>
 <body>
-    
+    <div class="main">
+        <h2 class="main-header">Emotions Analysis</h2>
+        <section class="main-input-comment">
+            <label for="comment">How do you feel? Write it down below</label>
+            <br>
+            <br>
+            <textarea name="comment" id="comment" cols="30" rows="10" class="main-comment-area" placeholder="Comment Here"></textarea>
+            <button class="main-analyze-button"
+            onclick="onAnalyzeButtonClick()"
+            >Psycho Analyze Comment Above</button>
+        </section>
+
+        <section class="main-result">
+            <p id="main-result-block" class="main-result-block invisible">
+                <span>Result:</span>
+                <span id="result"></span>
+            </p>
+        </section>
+    </div>
 
 
 
 
-    <!-- Import axios library -->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-    <!-- Querystring library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.7.0/qs.min.js"></script>
-
-    <!-- Connect to local JS -->
-    <script src="./assets/JavaScript/index.js"></script>
+   
 </body>
 </html>
