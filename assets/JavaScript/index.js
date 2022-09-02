@@ -10,7 +10,7 @@ var x = document.getElementById("demo");
         }
         function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
+  "  Longitude: " + position.coords.longitude;
 }
 
 function showError(error) {
@@ -19,7 +19,7 @@ function showError(error) {
       x.innerHTML = "User denied the request for Geolocation."
       break;
     case error.POSITION_UNAVAILABLE:
-      x.innerHTML = "Location information is unavailable."
+      x.innerHTML = "Location information is unavailable. Please confirm you enabled GPS on your device and allowed this app access. Thank you."
       break;
     case error.TIMEOUT:
       x.innerHTML = "The request to get user location timed out."
