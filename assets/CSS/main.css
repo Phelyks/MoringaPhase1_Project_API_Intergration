@@ -6,15 +6,15 @@
 }
 
 body {
-    padding: 20px;
+    padding: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-image: url(https://wallpapercave.com/wp/wp6598275.jpg); */
-    background-image: url("./../Images/smokewhiteimage.jpg");
+    background-image: url("./../Images/gpsLocation.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    background-size: auto;
     
 }
 
@@ -26,19 +26,29 @@ label, textarea {
     margin-top: 5%;
     padding: 10px;
     width: 45%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.747);
-    background-color: rgba(0, 0, 0, 0.342);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.986);
+    background-color: rgba(0, 0, 0, 0.623);
+    font-size: 26px;
 }
 
 .main-header {
     text-align: center;
-    margin-bottom: 20px;
+    margin: 30px 20px 20px 20px;
+    color: bisque;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-style: normal;
+    text-decoration: underline;
 }
 
 .main-input-comment {
-    margin-bottom: 20px;
-    color: blue;
+    margin: 40px 20px 20px 20px;
+    color: bisque;
+    font-weight: bold;
+    text-align: center;
 }
+
+
 
 .main-comment-area {
     width: 95%;
@@ -51,15 +61,15 @@ label, textarea {
 }
 
 .main-analyze-button {
-    width: 100%;
-    padding: 5px;
+    width: 88%;
+    padding: 10px;
     border: 1px solid #007bff;
     background-color: #007bff;
-    border-radius: 7px;
+    border-radius: 17px;
     color: white;
     text-align: center;
-    font-size: 16px;
-    outline: none;
+    font-size: 26px;
+    
 }
 
 .main-analyze-button::-moz-focus-inner {
@@ -67,9 +77,10 @@ label, textarea {
 }
 
 .main-analyze-button:hover {
-    background-color: #0069d9;
-    border-color: #0069d9;
+    background-color: green;
+    border-color: green;
     cursor: pointer;
+    font-weight: bolder;
 }
 
 .main-result-block {

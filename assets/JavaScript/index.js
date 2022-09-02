@@ -1,46 +1,31 @@
-// const for URL => JAAS API
+var x = document.getElementById("demo");
 
-const rapidApiApiUrl = "https://arjunkomath-jaas-json-as-a-service-v1.p.rapidapi.com/";
+    function getLocation() {
+        if (navigator.geolocation) {
 
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
 
-// Objects using RapidAPI authorization for headers and headers in content
-
-const rapidApiRequestHeaders = {
-    'X-RapidAPI-Host': 'arjunkomath-jaas-json-as-a-service-v1.p.rapidapi.com'
-  , 'X-RapidAPI-Key': '7xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-  , 'Content-Type': 'application/json'
-};
-
-//Variable Store ID
-
-let studentId = "";
-
-// Student ID Examples
-
-const student = {
-    name: "John"
-    , surname: "Doe"
-    ,age: 18
-};
-
-// POST request on axioa from the connected Library
-
-axios.post(rapidApiApiUrl, student,{
-    headers: rapidApiRequestHeaders
-})
-
-//Handle a successful response from the server
-
-    .then(response => {
-        //Getting data from response containing the needed data on the server
-        const data = response.data;
-        console.log("data", data);
-
-        //Save the unique id from the server for the object
-
-        studentId = data._id;
-    })
-
-    //Catch and print errors if any
-
-    .catch(error => console.error("On create student error", error));
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
